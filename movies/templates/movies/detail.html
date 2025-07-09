@@ -1,0 +1,18 @@
+{% extends "baseGeneric.html" %}
+
+{% block content %}
+  <h1>Title: {{ movie.name }}</h1>
+
+  <!-- author detail link not yet defined -->
+  <p><strong>Year:</strong> {{ movie.year }}</p>
+  <p><strong>Director:</strong> {{ movie.director }}</p>
+  <p><strong>Genre:</strong> {{ movie.genre }}</p>
+  <p><strong>Poster:</strong> <img src="{{ movie.image }}" alt="poster"></p>
+
+  <li><a href="{% url 'index' %}">My List</a></li>
+
+
+
+  </div>
+{% endblock %}
+

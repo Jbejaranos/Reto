@@ -1,0 +1,16 @@
+
+{% extends "baseGeneric.html" %}
+
+{% block content %}
+  {% if moviesList %}
+    <h1>My List</h1>
+        <ul>
+            {% for movie in moviesList %}
+                <li><a href="/movies/detail/{{movie.name}}/">{{movie.name}}</a>
+                </li>
+            {% endfor %}
+        </ul>  
+    {% else %}
+        <p>No movies</p>
+    {% endif %}
+{% endblock %}
